@@ -1,5 +1,12 @@
-<li>
-	<a href="<?php the_permalink(); ?>">
+<?php 
+
+
+//var_dump( get_field('youtube_video_id') );
+?>
+
+
+<li class="bx_youtube" data-youtube_id="<?php echo get_field('youtube_video_id');?>">
+	<a href="<?php the_permalink(); ?>"  >
 		<?php if ( has_post_thumbnail()) : ?>
 			<?php the_post_thumbnail('thumb313x188'); ?>
 		<?php else: ?>

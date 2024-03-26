@@ -80,4 +80,23 @@ function replace_placeholder_nav_menu_item_with_latest_post( $items, $menu, $arg
     return $items;
 }
 
-?>
+add_action('wp_footer', 'add_custom_css');
+function add_custom_css() { ?>
+    <script>
+        jQuery(document).ready(function($) {
+            $('.bx_youtube').click(function(event) {
+                event.preventDefault();
+               var data_youtube_id = $(this).attr('data-youtube_id');
+               //console.log(data_youtube_id);
+               var code = '<iframe id="youtube_autoplay" width="100%" height="530" src="https://www.youtube.com/embed/'+data_youtube_id+'" frameborder="0" allowfullscreen></iframe>';
+                $('.videoWrapper').html(code);
+                //$("#youtube_autoplay")[0].src += "?autoplay=1";
+
+            });
+        });
+    </script>
+    <style>
+
+    </style>
+    <?php
+}
