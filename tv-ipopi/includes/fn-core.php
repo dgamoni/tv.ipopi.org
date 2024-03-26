@@ -196,7 +196,8 @@ function am_add_javascript( ) {
 	wp_enqueue_script('jquery');
 	if( !is_admin() ) {
 		wp_enqueue_script('am_pugins', get_template_directory_uri().'/includes/js/plugins.js', array( 'jquery' ),$am_option['version'],true );
-		wp_enqueue_script('am_general', get_template_directory_uri().'/includes/js/general.js', array( 'jquery' ),$am_option['version'],true );
+		// wp_enqueue_script('am_general', get_template_directory_uri().'/includes/js/general.js', array( 'jquery' ),$am_option['version'],true );
+		wp_enqueue_script('am_general', get_template_directory_uri().'/includes/js/general.js', array( 'jquery' ),rand(),true );
 	}
 }
 

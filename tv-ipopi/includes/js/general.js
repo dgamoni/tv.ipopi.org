@@ -36,7 +36,8 @@
 			maxSlides: 3,
 			slideWidth: 313,
 			infiniteLoop: false,
-			hideControlOnEnd: true
+			hideControlOnEnd: true,
+			touchEnabled: false
 	  	});
         
     });
